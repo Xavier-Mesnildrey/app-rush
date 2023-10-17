@@ -1,18 +1,18 @@
 import Spot1 from "./components/Spot1"
 
+function Spot1(plage) {
 
-const Spot1 = () => {
-    return (
-      <article classname="CardComponent">
-        <h1>Spot Hossegor</h1>
-        <img src="{}" alt="Plage La Sud" />
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Iste voluptates ut, corporis magnam error sequi
-          minima culpa pariatur soluta repellat.
-        </p>
-      </article>
-    );
-  }
+  return (
+    <figure>
+      {plage.imgSrc ?(<img src={plage.imgSrc} 
+      alt={plage.name} /> 
+       ) : (
+      <p>???</p>
+      )}
+      <figcaption>{plage.name}</figcaption>
+    </figure>
+
+)}
+
   
   export default Spot1;
